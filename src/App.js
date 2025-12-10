@@ -18,7 +18,7 @@ function App() {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/crud">Crud</Link>
             </li>
             <li>
@@ -29,7 +29,7 @@ function App() {
             </li>
             <li>
               <Link to="/todayscrud">newcrud</Link>
-            </li>
+            </li> */}
 
           </ul>
         </nav>
