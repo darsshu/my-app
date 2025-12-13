@@ -2,10 +2,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './component/Home';
-import About from './component/About';
-import Crud from './component/Crud';
-import BestCrud from './component/BestCrud';
-import NewCrud from './component/NewCrud';
+import DynamicForm from './component/DynamicForm';
+
 
 
 function App() {
@@ -13,33 +11,21 @@ function App() {
     <Router>
       <div className="App">
         {/* Navigation */}
-        <nav className=' bg-black text-white'>
+        <nav className=' border-b-2 border-black border flex justify-center py-4'>
           <ul className='flex justify-between'>
             <li>
-              <Link to="/">Home</Link>
+              <Link className='underline hover:text-blue-500' to="/">Home</Link>
+              <Link className='underline hover:text-blue-500' to="/dynamicForm">Dynamic Form</Link>
             </li>
-            {/* <li>
-              <Link to="/crud">Crud</Link>
-            </li>
-            <li>
-              <Link to="/crud2">Crud2</Link>
-            </li>
-            <li>
-              <Link to="/newcrud">newcrud</Link>
-            </li>
-            <li>
-              <Link to="/todayscrud">newcrud</Link>
-            </li> */}
+
 
           </ul>
         </nav>
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/crud" element={<About />} />
-          <Route path="/crud2" element={<Crud />} />
-          <Route path="/newcrud" element={<BestCrud />} />
-          <Route path="/todayscrud" element={<NewCrud />} />
+          <Route path="/dynamicForm" element={<DynamicForm />} />
+
         </Routes>
       </div>
     </Router>
